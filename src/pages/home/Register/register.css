@@ -1,0 +1,53 @@
+.register {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("https://d1rytvr7gmk1sx.cloudfront.net/wp-content/uploads/2020/12/zoom-vanit-janthra.jpg?x76323");
+  background-size: cover;
+}
+
+.registerTitle {
+  font-size: 50px;
+  color: white;
+}
+
+.registerForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.registerForm > label {
+  margin: 10px 0;
+  color: whitesmoke;
+}
+
+.registerInput {
+  padding: 10px;
+  background-color: white;
+  border: none;
+}
+
+.registerButton {
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: teal;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  position: static;
+}
+
+.registerLoginButton {
+  position: absolute;
+  top: 60px;
+  right: 40px;
+  background-color: lightcoral;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+}

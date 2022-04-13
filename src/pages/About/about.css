@@ -1,0 +1,28 @@
+.about {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("https://www.stoltzgroup.com/wp-content/uploads/2020/04/Stoltz_Zoom_Background_4.png");
+  background-size: cover;
+}
+
+.aboutTitle {
+  font-size: 50px;
+  color: grey;
+  padding-top: 50px;
+}
+
+.aboutText {
+  margin: 10px;
+  margin-top: 20px;
+  padding: 5px;
+  width: 80%;
+  font-family: "Varela Round", sans-serif;
+  font-size: 12px;
+  color: #222;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+}
