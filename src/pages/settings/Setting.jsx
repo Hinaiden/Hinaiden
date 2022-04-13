@@ -28,14 +28,14 @@ export default function Setting() {
       updatedUser.profilePic = filename;
       try {
         await axiosInstance.post(
-          "https://aidendevblog.herokuapp.com/api/upload",
+          "https://aidenblog123.herokuapp.com/api/upload",
           data
         );
       } catch (err) {}
     }
     try {
       await axiosInstance.put(
-        "https://aidendevblog.herokuapp.com/api/users/" + user._id,
+        "https://aidenblog123.herokuapp.com/api/users/" + user._id,
         updatedUser
       );
       setSuccess(true);

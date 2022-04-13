@@ -14,7 +14,7 @@ export default function Login() {
     dispatch({ type: "LOGIN_START" });
     try {
       const res = await axiosInstance.post(
-        "https://aidendevblog.herokuapp.com/api/auth/login",
+        "https://aidenblog123.herokuapp.com/api/auth/login",
         {
           username: userRef.current.value,
           password: passwordRef.current.value,

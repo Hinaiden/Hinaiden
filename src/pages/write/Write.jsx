@@ -24,14 +24,14 @@ export default function Write() {
       newPost.photo = filename;
       try {
         await axiosInstance.post(
-          "https://aidendevblog.herokuapp.com/api/upload",
+          "https://aidenblog123.herokuapp.com/api/upload",
           data
         );
       } catch (err) {}
     }
     try {
       const res = await axiosInstance.post(
-        "https://aidendevblog.herokuapp.com/api/posts",
+        "https://aidenblog123.herokuapp.com/api/posts",
         newPost
       );
       window.location.replace("/post/" + res.data._id);

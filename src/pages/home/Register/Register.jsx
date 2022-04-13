@@ -15,7 +15,7 @@ export default function Register() {
 
     try {
       const res = await axiosInstance.post(
-        "https://aidendevblog.herokuapp.com/api/auth/register/",
+        "https://aidenblog123.herokuapp.com/api/auth/register/",
         {
           username,
           email,
@@ -23,7 +23,7 @@ export default function Register() {
         }
       );
       res.data &&
-        window.location.replace("https://aidendevblog.herokuapp.com/api/login");
+        window.location.replace("https://aidenblog123.herokuapp.com/api/login");
     } catch (err) {
       setError(true);
     }

@@ -14,7 +14,7 @@ export default function Home() {
     const fetchPosts = async () => {
       try {
         const res = await axiosInstance.get(
-          "https://aidendevblog.herokuapp.com/api/posts/" + search
+          "https://aidenblog123.herokuapp.com/api/posts/" + search
         );
         setPosts(res.data);
       } catch (err) {
