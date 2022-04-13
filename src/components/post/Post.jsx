@@ -15,7 +15,10 @@ export default function Post({ post }) {
             </span>
           ))}
         </div>
-        <Link to={`/post/${post._id}`} className="link">
+        <Link
+          to={`https://aidenblog123.herokuapp.com/api/post/${post._id}`}
+          className="link"
+        >
           <span className="postTitle" key="post.title">
             {post.title}
           </span>
