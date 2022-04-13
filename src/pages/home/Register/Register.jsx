@@ -1,7 +1,7 @@
 import "./register.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { axiosInstance } from "../../../config.js";
+import axios from "axios";
 
 export default function Register() {
   const [username, setUsername] = useState("");
@@ -14,7 +14,7 @@ export default function Register() {
     setError(false);
 
     try {
-      const res = await axiosInstance.post(
+      const res = await axios.post(
         "https://aidenblog123.herokuapp.com/api/auth/register/",
         {
           username,

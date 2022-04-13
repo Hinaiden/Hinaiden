@@ -1,8 +1,8 @@
 import SideBar from "../../components/sidebar/Sidebar.jsx";
 import "./setting.css";
 import { useContext, useState } from "react";
-import axiosInstance from "../../config.js";
 import { Context } from "../../context/Context.js";
+import axios from "axios";
 
 export default function Setting() {
   const [file, setFile] = useState(null);
@@ -27,14 +27,11 @@ export default function Setting() {
       data.append("file", file);
       updatedUser.profilePic = filename;
       try {
-        await axiosInstance.post(
-          "https://aidenblog123.herokuapp.com/api/upload",
-          data
-        );
+        await axios.post("https://aidenblog123.herokuapp.com/api/upload", data);
       } catch (err) {}
     }
     try {
-      await axiosInstance.put(
+      await axios.put(
         "https://aidenblog123.herokuapp.com/api/users/" + user._id,
         updatedUser
       );

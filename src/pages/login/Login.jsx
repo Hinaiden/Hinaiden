@@ -1,8 +1,8 @@
 import { useContext, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./login.css";
-import axiosInstance from "../../config.js";
 import { Context } from "../../context/Context.js";
+import axios from "axios";
 
 export default function Login() {
   const userRef = useRef();
@@ -13,7 +13,7 @@ export default function Login() {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axiosInstance.post(
+      const res = await axios.post(
         "https://aidenblog123.herokuapp.com/api/auth/login",
         {
           username: userRef.current.value,
