@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { Context } from "../../context/Context.js";
+import axiosInstance from "../../config";
 
 export default function SinglePost() {
   const location = useLocation();
@@ -16,7 +17,7 @@ export default function SinglePost() {
 
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get(
+      const res = await axiosInstance.get(
         "https://aidenblog123.herokuapp.com/api/posts/" + path
       );
       setPost(res.data);
@@ -28,7 +29,7 @@ export default function SinglePost() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(
+      await axiosInstance.delete(
         `https://aidenblog123.herokuapp.com/api/posts/${post._id}`,
         {
           data: { username: user.username },
@@ -40,7 +41,7 @@ export default function SinglePost() {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(
+      await axiosInstance.put(
         `https://aidenblog123.herokuapp.com/api/posts/${post._id}`,
         {
           username: user.username,
